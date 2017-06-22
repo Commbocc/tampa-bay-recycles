@@ -1,0 +1,14 @@
+blockquote#lead {
+padding:10px 20px;
+margin:0 0 20px;
+font-size: 18px;
+border-left: 8px solid #87C760;
+float:left;
+text-align: left;
+line-height: 28px;
+  }/* Put your custom styles here */
+
+p#lead{
+text-align:left;
+
+}
