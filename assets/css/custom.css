@@ -1,0 +1,32 @@
+/* Put your custom styles here */
+
+blockquote#lead {
+	padding:10px 20px;
+	margin:0 0 20px;
+	font-size: 18px;
+	border-left: 8px solid #87C760;
+	float:left;
+	text-align: left;
+	line-height: 28px;
+}
+
+/* carousel transition */
+#header-3 .editContent h1 {
+	text-shadow: 2px 2px 4px #333;
+	color: #5FA2D0 !important;
+}
+
+#header-3 .hero {
+	/* background: url('../images/carousel/Hillsborough Family at Home.JPG') no-repeat center center; */
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+  background-position: center;
+
+	-webkit-transition: all 1.5s ease-in-out;
+	-moz-transition: all 1.5s ease-in-out;
+	-o-transition: all 1.5s ease-in-out;
+	transition: all 1.5s ease-in-out;
+}
