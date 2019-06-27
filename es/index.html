@@ -1,14 +1,43 @@
 ---
+layout: main
+title: Tampa Bay Recicla
+lead: Juntos hemos convertido a Tampa Bay en una de las principales regiones de reciclaje en Florida
+featured_topic_text: "Tema Destacado"
+translate_text: "English"
+translate_link: "/"
+permalink: /es/
 ---
 
-<!DOCTYPE html>
-<html lang="es" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Tampa Bay Recicla</title>
-    <meta http-equiv="refresh" content="0; url=https://translate.google.com/translate?sl=auto&tl=es&u={{ site.url }}">
-  </head>
-  <body>
+<section class="content-1-7 content-block" id="content-1-7">
+  <div class="container">
 
-  </body>
-</html>
+    {% include gov-logos.html %}
+
+    <div class="row center-block" id="lead-text">
+      <div class="col-md-10 col-md-offset-1 text-left">
+        <p>
+          Los gobiernos locales de Tampa Bay se han unido para mejorar los esfuerzos de reciclaje en la región. Independientemente de la comunidad del área de Tampa Bay a la que usted llame hogar, todos los programas residenciales de reciclaje en los condados de Hillsborough y Pinellas ahora reciclan los mismos artículos, pero también enfrentamos el mismo problema de contaminación: intentar reciclar artículos o materiales sucios que nuestros programas no aceptan.
+        </p>
+        <p>
+          Únase a la conversación de las redes sociales, comparta sugerencias de reciclaje y haga preguntas utilizando <strong>#TampaBayRecycles</strong>
+        </p>
+      </div>
+    </div>
+    <div class="row" id="pull-quote">
+      <div class="col-md-8 col-md-offset-2">
+        <blockquote id="lead">
+          Ya sea que haya estado reciclando durante décadas o recién haya comenzado, vale la pena echar un segundo vistazo para asegurarse de que está reciclando correctamente. La tecnología y los procesos de reciclaje cambian con el tiempo, por lo que las reglas del programa de reciclaje también cambian.
+        </blockquote>
+      </div>
+    </div>
+  </div><!-- /.container -->
+</section>
+
+<section class="content-block content-1-8">
+  <div class="container">
+
+    {% assign filtered_posts = site.posts | where: 'lang', 'es'  %}
+    {% include tabs.html %}
+
+  </div><!-- /.container -->
+</section>

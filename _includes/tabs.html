@@ -1,10 +1,10 @@
 <ul class="nav nav-tabs text-center" id="myTab" role="tablist">
-  {% for post in site.posts %}
+  {% for post in filtered_posts %}
   <li class="{% if forloop.index == 1 %}active{% endif %}">
     <a data-toggle="tab" href="#tab{{ forloop.index }}" role="tab">
 
       {% if forloop.index == 1 %}
-      Featured Topic
+      {{ page.featured_topic_text }}
       {% else %}
       {{ post.title }}
       {% endif %}
@@ -16,7 +16,7 @@
 
 <div class="tab-content">
 
-  {% for post in site.posts %}
+  {% for post in filtered_posts %}
   <div class="tab-pane fade {% if forloop.index == 1 %}in active{% endif %}" id="tab{{ forloop.index }}">
 
     {{ post.content }}

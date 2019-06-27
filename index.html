@@ -2,7 +2,9 @@
 layout: main
 title: Tampa Bay Recycles
 lead: Together We Have Made Tampa Bay one of the Top Recycling Regions in Florida
-
+featured_topic_text: "Featured Topic"
+translate_text: "Español"
+translate_link: "/es"
 ---
 
 <section class="content-1-7 content-block" id="content-1-7">
@@ -31,6 +33,7 @@ lead: Together We Have Made Tampa Bay one of the Top Recycling Regions in Florid
 <section class="content-block content-1-8">
   <div class="container">
 
+    {% assign filtered_posts = site.posts | where: 'lang', 'en'  %}
     {% include tabs.html %}
 
   </div><!-- /.container -->
