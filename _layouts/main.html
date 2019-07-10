@@ -13,7 +13,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>
-    {{ page.title }}
+      {{ site.data.i18n[page.locale].site_title }}
   </title>
 
   <!-- Core CSS -->
@@ -39,12 +39,12 @@
           <div class="editContent">
             <h1>
               <img src="{{ '/assets/images/brand/recycleLogo.png' | prepend: site.baseurl }}" class="img-responsive center-block">
-              {{ page.title }}
+                {{ site.data.i18n[page.locale].site_title }}
             </h1>
           </div>
           <div class="editContent">
             <p class="lead">
-              {{ page.lead }}
+              {{ site.data.i18n[page.locale].jumbo_text }}
             </p>
           </div>
         </div>
@@ -52,14 +52,45 @@
     </section>
   </header>
 
+  <section class="content-1-7 content-block" id="content-1-7">
+    <div class="container">
+
+      {% include gov-logos.html %}
+
+      <div class="row center-block" id="lead-text">
+        <div class="col-md-10 col-md-offset-1 text-left">
+
+          {{ site.data.i18n[page.locale].intro_text | markdownify }}
+
+        </div>
+      </div>
+      <div class="row" id="pull-quote">
+        <div class="col-md-8 col-md-offset-2">
+          <blockquote id="lead">
+            {{ site.data.i18n[page.locale].intro_quote }}
+          </blockquote>
+        </div>
+      </div>
+    </div><!-- /.container -->
+  </section>
+
+  <section class="content-block content-1-8">
+    <div class="container">
+
+      {% assign filtered_posts = site.posts | where: 'lang', page.locale  %}
+      {% include tabs.html %}
+
+    </div><!-- /.container -->
+  </section>
+
   {{ content }}
 
   <footer class="content-block-nopad bg-deepocean footer-wrap-1-2">
     <div class="container footer-1-2">
       <img class="img-responsive center-block" src="{{ '/assets/images/brand/recycleLogo.png' | prepend: site.baseurl }}">
-      <p class="text-center">&copy; Tampa Bay Recycles, 2017</p>
+      <p class="text-center">&copy; {{ site.data.i18n[page.locale].site_title }}, 2017</p>
       <p class="text-center">
-        <a href="{{ page.translate_link | prepend: site.baseurl }}" class="text-danger">{{ page.translate_text }}</a>
+        <a href="{{ site.data.i18n[page.locale].translate_link | prepend: site.baseurl }}" class="text-danger">{{ site.data.i18n[page.locale].translate_text }}</a>
       </p>
     </div>
   </footer>
