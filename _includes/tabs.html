@@ -4,7 +4,7 @@
     <a data-toggle="tab" href="#tab{{ forloop.index }}" role="tab">
 
       {% if forloop.index == 1 %}
-      {{ page.featured_topic_text }}
+      {{ site.data.i18n[page.locale].feature_topic_text }}
       {% else %}
       {{ post.title }}
       {% endif %}
