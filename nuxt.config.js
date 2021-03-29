@@ -6,8 +6,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - nuxt-vuetify',
-    title: 'nuxt-vuetify',
+    titleTemplate: '%s',
+    title: 'Tampa Bay Recycles',
     htmlAttrs: {
       lang: 'en',
     },
@@ -16,7 +16,7 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/recycleLogo.png' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -37,11 +37,20 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxt/content'],
+  modules: ['@nuxt/content', 'nuxt-i18n'],
 
   // https://content.nuxtjs.org/installation
   content: {
     // Options
+  },
+
+  // https://i18n.nuxtjs.org/setup
+  i18n: {
+    locales: ['en', 'es'],
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en',
+    },
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
@@ -51,8 +60,8 @@ export default {
       dark: false,
       themes: {
         light: {
-          primary: '#007FB9',
-          secondary: colors.green,
+          primary: colors.lightBlue.darken4,
+          secondary: colors.green.darken1,
           // accent: colors.grey.darken2,
         },
         // dark: {

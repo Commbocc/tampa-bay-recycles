@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-tabs v-model="tabIndex" fixed-tabs>
+    <v-tabs v-model="tabIndex" show-arrows center-active centered grow>
       <v-tabs-slider color="green"></v-tabs-slider>
 
       <v-tab
@@ -35,21 +35,22 @@
 
 <script>
 export default {
-  data() {
-    return {
-      tabIndex: null,
-      tabs: [],
-    }
+  props: {
+    tabs: {
+      type: Array,
+      required: true,
+      default: () => [],
+    },
   },
 
-  async fetch() {
-    this.tabs = await this.$content('tabs').sortBy('position').fetch()
-  },
+  data: () => ({
+    tabIndex: null,
+  }),
 }
 </script>
 
 <style lang="scss">
-$color: #4ab848;
+$color: #43a047;
 
 #tab-items {
   h1,

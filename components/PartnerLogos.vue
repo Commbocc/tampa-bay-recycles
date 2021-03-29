@@ -15,12 +15,12 @@
 
 <script>
 export default {
-  data: () => ({
-    partners: [],
-  }),
-
-  async fetch() {
-    this.partners = await this.$content('partners').sortBy('position').fetch()
+  props: {
+    partners: {
+      type: Array,
+      required: true,
+      default: () => [],
+    },
   },
 }
 </script>
