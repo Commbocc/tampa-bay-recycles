@@ -1,5 +1,5 @@
 <template>
-  <v-footer tile color="#76c0f5" class="text-center pt-8">
+  <v-footer tile color="primary" class="text-center pt-8">
     <v-card-text>
       <v-img
         :src="require(`~/assets/recycleLogo.png`)"
@@ -20,7 +20,7 @@
 
     <v-card-text class="white--text">
       &copy;
-      {{ new Date().getFullYear() }} — <strong>Tampa Bay Recycles</strong>
+      <strong>Tampa Bay Recycles</strong>, 2017 - {{ new Date().getFullYear() }}
     </v-card-text>
   </v-footer>
 </template>

@@ -37,7 +37,12 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ['@nuxt/content'],
+
+  // https://content.nuxtjs.org/installation
+  content: {
+    // Options
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
@@ -45,6 +50,11 @@ export default {
     theme: {
       dark: false,
       themes: {
+        light: {
+          primary: '#007FB9',
+          secondary: colors.green,
+          // accent: colors.grey.darken2,
+        },
         // dark: {
         //   primary: colors.blue.darken2,
         //   accent: colors.grey.darken3,
