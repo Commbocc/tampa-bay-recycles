@@ -13,17 +13,21 @@
       </v-tab>
     </v-tabs>
 
-    <v-tabs-items id="tab-items" v-model="tabIndex">
+    <v-divider />
+
+    <v-tabs-items v-model="tabIndex">
       <v-tab-item v-for="tab in tabs" :key="tab.slug" :value="tab.slug">
         <v-card flat>
           <v-card-text>
-            <v-row justify="center">
-              <v-col v-if="tab.media_src" cols="12" sm="5" md="4">
+            <v-row justify="center" align="center">
+              <v-col v-if="tab.media_src" cols="12" sm="5">
                 <TabMedia :type="tab.media_type" :src="tab.media_src" />
               </v-col>
 
-              <v-col cols="12" sm="7" md="8">
-                <nuxt-content :document="tab" />
+              <v-col cols="12" sm="7">
+                <div class="mx-auto prose prose-sm">
+                  <nuxt-content :document="tab" />
+                </div>
               </v-col>
             </v-row>
           </v-card-text>
@@ -48,19 +52,3 @@ export default {
   }),
 }
 </script>
-
-<style lang="scss">
-$color: #43a047;
-
-#tab-items {
-  h1,
-  h2,
-  h3 {
-    color: $color;
-  }
-
-  a {
-    color: $color;
-  }
-}
-</style>

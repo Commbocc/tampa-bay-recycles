@@ -3,7 +3,6 @@
     id="css-carousel"
     :aspect-ratio="-1"
     :src="imgSrc"
-    x-gradient="to bottom right, rgba(0,0,0,0.4), rgba(0,0,0,0.25)"
     position="center center"
   >
     <v-container class="py-16 my-16 text-center text-shadow">
@@ -31,29 +30,40 @@ export default {
   },
 
   data: () => ({
-    imgSrc: '',
+    activeImgIndex: 0,
     interval: null,
   }),
 
+  computed: {
+    imgSrc() {
+      return this.images[this.activeImgIndex]
+    },
+  },
+
   beforeMount() {
-    this.imgSrc = this.images[0]
+    this.preloadImages()
 
     // interval
-    let activeIndex = 0
     this.interval = setInterval(() => {
-      activeIndex++
-
-      if (activeIndex === this.images.length) {
-        activeIndex = 0
+      if (this.activeImgIndex + 1 === this.images.length) {
+        return (this.activeImgIndex = 0)
       }
-
-      this.imgSrc = this.images[activeIndex]
+      this.activeImgIndex++
     }, 5500)
   },
 
   beforeDestroy() {
     // clear interval
     clearInterval(this.interval)
+  },
+
+  methods: {
+    preloadImages() {
+      this.images.forEach((src) => {
+        const image = new Image()
+        image.src = src
+      })
+    },
   },
 }
 </script>

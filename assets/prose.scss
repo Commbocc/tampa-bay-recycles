@@ -1,0 +1,46 @@
+$color: #388e3c;
+
+.prose {
+  max-width: 65ch;
+
+  &.prose-sm {
+    font-size: 0.875rem;
+  }
+  &.prose-lg {
+    font-size: 1.125rem;
+  }
+  &.prose-xl {
+    font-size: 1.25rem;
+  }
+  &.prose-2xl {
+    font-size: 1.5rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $color;
+    // font-weight: 500;
+    margin: 2em 0 1em 0;
+    &** {
+      margin-top: 0;
+    }
+  }
+
+  p {
+    margin: 1.25em 0 1.25em 0;
+  }
+
+  a {
+    color: $color;
+  }
+
+  blockquote {
+    padding: 1em 1.5em;
+    font-weight: 400;
+    font-style: italic;
+  }
+}

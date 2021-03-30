@@ -14,3 +14,5 @@ export default {
   },
 }
 </script>
+
+<style src="~/assets/prose.scss" lang="scss"></style>

@@ -12,7 +12,7 @@
       <PartnerLogos :partners="partners" />
 
       <!-- page content -->
-      <div class="page-content mb-8 text-body-1">
+      <div class="page-content mb-8 mx-auto prose prose-lg">
         <nuxt-content :document="homeContent" />
       </div>
 
@@ -34,13 +34,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss">
-.page-content {
-  blockquote {
-    padding: 16px 0 16px 24px;
-    font-size: 18px;
-    font-weight: 300;
-  }
-}
-</style>
