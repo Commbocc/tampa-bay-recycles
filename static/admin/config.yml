@@ -1,0 +1,86 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: static/uploads
+# public_folder: /img
+
+i18n:
+  # Required and can be one of multiple_folders, multiple_files or single_file
+  # multiple_folders - persists files in `<folder>/<locale>/<slug>.<extension>`
+  # multiple_files - persists files in `<folder>/<slug>.<locale>.<extension>`
+  # single_file - persists a single file in `<folder>/<slug>.<extension>`
+  structure: multiple_folders
+
+  # Required - a list of locales to show in the editor UI
+  locales: [en, es]
+
+  # Optional, defaults to the first item in locales.
+  # The locale to be used for fields validation and as a baseline for the entry.
+  default_locale: en
+
+collections:
+  - name: 'pages'
+    label: 'Pages'
+    i18n:
+      structure: single_file
+    files:
+      - name: about
+        label: About Page
+        i18n: true
+        file: content/home.md
+        format: 'frontmatter'
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Lead in, name: leadIn, widget: string }
+          # - { label: Images, name: images, widget: image }
+          - {
+              label: 'Images',
+              name: 'images',
+              widget: 'list',
+              required: false,
+              field: { label: 'Image', name: 'image', widget: 'image' },
+            }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - name: 'tabs'
+    label: 'Tabs'
+    i18n: true
+    folder: 'content/tabs'
+    format: 'frontmatter'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: true
+    fields:
+      - { label: 'Order Position', name: 'position', widget: 'number' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Media Type',
+          name: 'media_type',
+          widget: 'select',
+          options: ['image', 'video'],
+          default: 'image',
+        }
+      - {
+          label: 'Media String',
+          name: 'media_src',
+          widget: 'string',
+          required: false,
+        }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - name: 'partners'
+    label: 'Partners'
+    i18n: false
+    folder: 'content/partners'
+    format: 'frontmatter'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Order Position', name: 'position', widget: 'number' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Logo', name: 'image', widget: 'image', allow_multiple: false }
+      - { label: 'URL', name: 'url', widget: 'string' }
