@@ -26,7 +26,7 @@ export default {
   async asyncData({ app, $content }) {
     const locale = app.localePath('index').replace('/', '') || 'en'
 
-    const homeContent = await $content(`home.${locale}`).fetch()
+    const homeContent = await $content(`pages/home.${locale}`).fetch()
     const partners = await $content(`partners`).sortBy('position').fetch()
     const tabs = await $content(`tabs/${locale}`).sortBy('position').fetch()
 

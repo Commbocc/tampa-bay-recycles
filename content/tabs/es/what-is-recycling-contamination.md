@@ -1,9 +1,8 @@
 ---
 position: 4
 title: '¿Qué es la contaminación de reciclaje?'
-# netlify cms field enum
-media_type: image
-media_src: /uploads/contamination.jpg
+imageSrc: /uploads/contamination.jpg
+iframeSrc: null
 ---
 
 ## ¿Qué es la contaminación de reciclaje?

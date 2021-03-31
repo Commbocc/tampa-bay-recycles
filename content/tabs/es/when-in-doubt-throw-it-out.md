@@ -1,9 +1,8 @@
 ---
 position: 3
 title: 'CUANDO TENGA DUDAS, TÍRELO'
-# netlify cms field enum
-media_type: null
-media_src: null
+imageSrc: null
+iframeSrc: https://www.youtube.com/embed/wBajyCx7wlk
 ---
 
 ## Cuando esté en duda, arrójelo

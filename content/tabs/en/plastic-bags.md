@@ -1,9 +1,8 @@
 ---
 position: 2
 title: Plastic Bags
-# netlify cms field enum
-media_type: video
-media_src: https://www.youtube.com/embed/RCn5xrAFh2Q
+imageSrc: null
+iframeSrc: https://www.youtube.com/embed/RCn5xrAFh2Q
 ---
 
 ## Keep Plastic Bags Out of Recycling

@@ -1,6 +1,7 @@
 ---
 title: Tampa Bay Recicla
-leadIn: Juntos hemos convertido a Tampa Bay en una de las principales regiones de reciclaje en Florida
+leadIn: Juntos hemos convertido a Tampa Bay en una de las principales regiones
+  de reciclaje en Florida
 images:
   - /uploads/Hillsborough Family at Home.JPG
   - /uploads/Pinellas Family at Collection.JPG

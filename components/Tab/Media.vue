@@ -1,22 +1,25 @@
 <template>
   <div>
-    <v-img v-if="type == 'image'" :src="src" contain></v-img>
-
     <v-responsive
-      v-else-if="type == 'video'"
+      v-if="tab.iframeSrc"
       :aspect-ratio="16 / 9"
       content-class="ratio"
     >
-      <iframe :src="src" frameborder="0"></iframe>
+      <iframe :src="tab.iframeSrc" frameborder="0"></iframe>
     </v-responsive>
+
+    <v-img v-else-if="tab.imageSrc" :src="tab.imageSrc" contain></v-img>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    type: String,
-    src: String,
+    tab: {
+      type: Object,
+      required: true,
+      default: () => ({}),
+    },
   },
 }
 </script>

@@ -1,9 +1,8 @@
 ---
 position: 4
 title: What is Recycling Contamination?
-# netlify cms field enum
-media_type: image
-media_src: /uploads/contamination.jpg
+imageSrc: /uploads/contamination.jpg
+iframeSrc: null
 ---
 
 ## What is Recycling Contamination?

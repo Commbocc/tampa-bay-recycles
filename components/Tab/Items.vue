@@ -20,8 +20,8 @@
         <v-card flat>
           <v-card-text>
             <v-row justify="center" align="center">
-              <v-col v-if="tab.media_src" cols="12" sm="5">
-                <TabMedia :type="tab.media_type" :src="tab.media_src" />
+              <v-col v-if="tab.iframeSrc || tab.imageSrc" cols="12" sm="5">
+                <TabMedia :tab="tab" />
               </v-col>
 
               <v-col cols="12" sm="7">

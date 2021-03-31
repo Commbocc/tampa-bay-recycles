@@ -1,9 +1,8 @@
 ---
 position: 0
 title: Mantener el reciclaje suelto
-# netlify cms field enum
-media_type: image
-media_src: /uploads/recycle-art.png
+imageSrc: /uploads/recycle-art.png
+iframeSrc: null
 ---
 
 ## Mantener el reciclaje suelto

@@ -1,9 +1,8 @@
 ---
 position: 3
 title: When in Doubt, Throw It Out
-# netlify cms field enum
-media_type: null
-media_src: null
+imageSrc: null
+iframeSrc: null
 ---
 
 ## When in Doubt, Throw It Out

@@ -1,9 +1,9 @@
 ---
 position: 1
 title: Enredadores
-# netlify cms field enum
-media_type: video
-media_src: https://www.youtube.com/embed/38lyLUtUSVk
+
+imageSrc: null
+iframeSrc: https://www.youtube.com/embed/wBajyCx7wlk
 ---
 
 ## Tire los “enredadores” a la basura regular

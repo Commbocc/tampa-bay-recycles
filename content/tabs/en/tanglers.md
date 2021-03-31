@@ -1,9 +1,8 @@
 ---
 position: 1
 title: Tanglers
-# netlify cms field enum
-media_type: video
-media_src: https://www.youtube.com/embed/38lyLUtUSVk
+imageSrc: null
+iframeSrc: https://www.youtube.com/embed/38lyLUtUSVk
 ---
 
 ## Trash the Tanglers

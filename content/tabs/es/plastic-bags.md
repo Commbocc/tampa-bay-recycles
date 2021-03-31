@@ -1,9 +1,8 @@
 ---
 position: 2
 title: 'BOLSAS DE PLÁSTICO'
-# netlify cms field enum
-media_type: video
-media_src: https://www.youtube.com/embed/RCn5xrAFh2Q
+imageSrc: null
+iframeSrc: https://www.youtube.com/embed/YsFqk9V1bFU
 ---
 
 ## Mantenga las bolsas de plástico sin reciclar
