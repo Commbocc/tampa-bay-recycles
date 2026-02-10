@@ -19,6 +19,7 @@ const items = [
       item: 'h-full',
     }"
     loop
+    role="presentation"
   >
     <NuxtImg
       :src="item"
