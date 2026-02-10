@@ -14,7 +14,7 @@ title: "Plastic Bags and Other Contamination"
 </iframe>
 
 #right
-Plastic Bags & Bagged Items
+## Plastic Bags & Bagged Items
 
 Plastic bags and bagged items don’t belong in curbside recycling or drop-off programs. Plastic bags get tangled in recycling sorting equipment and can shut down the recycling facility, which puts workers at risk to remove them.
 

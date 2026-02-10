@@ -1,6 +1,5 @@
 ::hero
 #title
-
 # Tampa Bay Recycles
 
 #description

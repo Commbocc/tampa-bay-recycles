@@ -4,7 +4,7 @@
     <UMain>
       <NuxtPage />
 
-      <UFooter class="h-50 bg-sky-400 w-screen">
+      <UFooter class="h-50 bg-sky-400 w-screen h-full">
         <template #default>
           <div class="flex flex-col items-center">
             <div>
@@ -12,7 +12,7 @@
             </div>
 
             <div>
-              <p>&copy; Tampa Bay Recycles, 2026</p>
+              <p>&copy; Tampa Bay Recycles, <ClientOnly>{{ new Date().getFullYear() }}</ClientOnly></p>
             </div>
           </div>
         </template>

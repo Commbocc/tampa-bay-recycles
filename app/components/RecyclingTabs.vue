@@ -8,21 +8,22 @@ const { data: tabs } = await useAsyncData("recycling-tabs", () => {
   <section class="bg-white py-12">
     <div class="mx-auto max-w-5xl px-4">
       <UTabs
-        v-if="tabs && tabs.length > 0"
+        v-if="tabs?.length"
         :items="
           tabs.map((tab) => ({ label: tab.title, value: tab.id, key: tab.id }))
         "
-        :default-value="tabs[0].id"
+        :default-value="tabs?.[0]?.id"
         :unmount-on-hide="false"
+        variant="link"
         class="w-full"
+        :ui="{ list: 'overflow-x-auto', trigger: 'min-w-auto' }"
       >
         <template #content="{ item }">
-          <div class="mt-6">
-            <ContentRenderer
-              :value="tabs.find((tab) => tab.id === item.value)"
-              class="prose prose-slate max-w-none"
-            />
-          </div>
+          <ContentRenderer
+            v-for="tab in tabs.filter((tab) => tab.id === item.value)"
+            :value="tab"
+            class="mt-6 prose prose-slate max-w-none tabs"
+          />
         </template>
       </UTabs>
     </div>
@@ -30,12 +31,23 @@ const { data: tabs } = await useAsyncData("recycling-tabs", () => {
 </template>
 
 <style>
-.prose iframe {
+.tabs iframe {
   width: 100%;
   aspect-ratio: 16 / 9;
 }
 
-.prose img {
+.tabs img {
   margin-top: 1rem;
+  width: auto;
+}
+
+p:has(img) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p > a, li > a {
+  text-decoration: underline;
 }
 </style>

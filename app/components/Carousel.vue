@@ -8,10 +8,10 @@ const items = [
 </script>
 
 <template>
-  <div class="w-full h-full">
+  <div class="">
     <UCarousel v-slot="{ item }" :items="items" :autoplay="{ delay: 5000 }">
-      <div class="h-full w-full">
-        <img :src="item" class="block w-full h-full" alt="Tampa Bay Recycles" />
+      <div class="flex items-center justify-center size-max">
+        <img :src="item" class="" alt="Tampa Bay Recycles" />
       </div>
     </UCarousel>
   </div>

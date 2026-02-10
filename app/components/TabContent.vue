@@ -1,5 +1,5 @@
 <template>
-  <section class="grid grid-cols-2 gap-4">
+  <section class="md:grid grid-cols-2 gap-4 sm:cols-1">
     <div class="">
       <slot name="left" />
     </div>

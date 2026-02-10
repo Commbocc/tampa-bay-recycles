@@ -1,5 +1,5 @@
 {
-  "name": "tampa-bay-recycles-nuxt",
+  "name": "tampa-bay-recycles",
   "private": true,
   "type": "module",
   "scripts": {
@@ -11,10 +11,16 @@
   "dependencies": {
     "@nuxt/a11y": "^1.0.0-alpha.1",
     "@nuxt/content": "^3.11.0",
+    "@nuxt/image": "^2.0.0",
     "@nuxt/ui": "^4.4.0",
     "better-sqlite3": "^12.6.2",
     "nuxt": "^4.3.0",
+    "nuxt-gtag": "^4.1.0",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.19",
+    "@types/node": "^25.2.0"
   }
 }
