@@ -8,11 +8,23 @@ const items = [
 </script>
 
 <template>
-  <div class="">
-    <UCarousel v-slot="{ item }" :items="items" :autoplay="{ delay: 5000 }">
-      <div class="flex items-center justify-center size-max">
-        <img :src="item" class="" alt="Tampa Bay Recycles" />
-      </div>
-    </UCarousel>
-  </div>
+  <UCarousel
+    v-slot="{ item }"
+    :items="items"
+    :autoplay="{ delay: 7000 }"
+    :ui="{
+      root: 'h-full',
+      viewport: 'h-full',
+      container: 'h-full',
+      item: 'h-full',
+    }"
+    loop
+  >
+    <NuxtImg
+      :src="item"
+      class="w-full h-full object-cover"
+      alt="Tampa Bay Recycles"
+      sizes="100vw sm:50vw md:400px"
+    />
+  </UCarousel>
 </template>
