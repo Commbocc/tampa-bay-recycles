@@ -15,8 +15,9 @@ const { data: tabs } = await useAsyncData("recycling-tabs", () => {
         :default-value="tabs?.[0]?.id"
         :unmount-on-hide="false"
         variant="link"
-        class="w-full"
-        :ui="{ list: 'overflow-x-auto', trigger: 'min-w-auto' }"
+        class="gap-4 w-full"
+        :ui="{ trigger: 'grow', label: 'font-bold' }"
+        color="neutral"
       >
         <template #content="{ item }">
           <ContentRenderer
@@ -47,7 +48,8 @@ p:has(img) {
   align-items: center;
 }
 
-p > a, li > a {
+p > a,
+li > a {
   text-decoration: underline;
 }
 </style>
