@@ -20,6 +20,7 @@ const items = [
     }"
     loop
     role="presentation"
+    aria-hidden="true"
   >
     <NuxtImg
       :src="item"
