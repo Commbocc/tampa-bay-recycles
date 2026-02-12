@@ -1,1 +1,0 @@
-import{_ as o,o as c,c as a,a as e,O as t}from"./Bsj2sbDS.js";const n={},r={class:"md:grid grid-cols-2 gap-4 sm:cols-1"},_={class:""},d={class:""};function i(s,l){return c(),a("section",r,[e("div",_,[t(s.$slots,"left")]),e("div",d,[t(s.$slots,"right")])])}const m=Object.assign(o(n,[["render",i]]),{__name:"TabContent"});export{m as default};
