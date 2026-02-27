@@ -1,6 +1,6 @@
 <template>
-  <section class="relative w-full h-full overflow-hidden">
-    <div class="object-cover absolute inset-0">
+  <section class="relative w-full h-full overflow-hidden bg-black">
+    <div class="object-cover absolute inset-0 bg-black">
       <Carousel />
 
       <div class="absolute inset-0 bg-black/60"></div>

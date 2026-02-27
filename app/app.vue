@@ -12,7 +12,10 @@
             </div>
 
             <div>
-              <p>&copy; Tampa Bay Recycles, <ClientOnly>{{ new Date().getFullYear() }}</ClientOnly></p>
+              <p>
+                &copy; Tampa Bay Recycles,
+                <ClientOnly>{{ new Date().getFullYear() }}</ClientOnly>
+              </p>
             </div>
           </div>
         </template>
@@ -20,3 +23,10 @@
     </UMain>
   </UApp>
 </template>
+
+<style>
+:focus {
+  outline: 3px solid #0a84ff;
+  outline-offset: 2px;
+}
+</style>
