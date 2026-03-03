@@ -25,19 +25,21 @@
 </template>
 
 <style>
-:focus {
-  outline: 3px solid #0a84ff;
+[role="tab"]:focus,
+[role="tab"]:focus-visible {
+  outline: 3px solid #1256a3;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(18, 86, 163, 0.12);
+}
+
+[tabindex]:focus,
+[tabindex]:focus-visible {
+  outline: 3px solid #1256a3;
   outline-offset: 2px;
 }
 
-[role="tablist"]:focus-visible,
-[role="tablist"]:focus {
-  outline: 3px solid #0a84ff !important;
-  outline-offset: 3px !important;
-}
-[role="tab"]:focus-visible,
-[role="tab"]:focus {
-  outline: 3px solid #0a84ff !important;
-  outline-offset: 3px !important;
+[role="tab"]:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
 }
 </style>
