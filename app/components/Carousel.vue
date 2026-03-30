@@ -25,6 +25,7 @@ const items = [
     <NuxtImg
       :src="item"
       class="w-full h-full object-cover"
+      role="presentation"
       alt="Tampa Bay Recycles"
       sizes="100vw sm:50vw md:400px"
     />
