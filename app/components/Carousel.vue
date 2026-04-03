@@ -20,12 +20,12 @@ const items = [
     }"
     loop
     role="presentation"
+    tabindex="-1"
     aria-hidden="true"
   >
     <NuxtImg
       :src="item"
       class="w-full h-full object-cover"
-      role="presentation"
       alt="Tampa Bay Recycles"
       sizes="100vw sm:50vw md:400px"
     />
