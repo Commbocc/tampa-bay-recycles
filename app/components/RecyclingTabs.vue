@@ -32,14 +32,16 @@ const { data: tabs } = await useAsyncData("recycling-tabs", () => {
 </template>
 
 <style>
-.tabs iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-}
+.tabs {
+  iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
 
-.tabs img {
-  margin-top: 1rem;
-  width: auto;
+  img {
+    margin-top: 1rem;
+    width: auto;
+  }
 }
 
 p:has(img) {
@@ -50,6 +52,14 @@ p:has(img) {
 
 p > a,
 li > a {
-  text-decoration: underline;
+  color: revert;
+}
+
+button {
+  color: revert;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 </style>
